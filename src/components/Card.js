@@ -2,36 +2,19 @@ import React from "react";
 import "../App.css";
 
 import { useSelector, useDispatch } from "react-redux";
-import { setNumber } from "../store/actions/map";
-
-const Marker = (props) => {
-  const markerStyle = {
-    position: "absolute",
-    background: "black",
-    width: "35px",
-    height: "35px",
-    borderRadius: "40px",
-    color: "white",
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
-    fontWeight: "bold",
-  };
-
-  return <div style={markerStyle}>{props.name}</div>;
-};
+import { setMarker } from "../store/actions/map";
 
 const Card = (props) => {
   const dispatch = useDispatch();
-  const selectedCard = useSelector((state) => state.map.selectedNumber);
+  const selectedCard = useSelector((state) => state.map.selectedMarker);
 
   const clickHandler = () => {
-    dispatch(setNumber(props.number));
+    dispatch(setMarker(props.id));
   };
 
   return (
     <div
-      className={selectedCard === props.number ? "SelectedCard" : "Card"}
+      className={selectedCard === props.id ? "SelectedCard" : "Card"}
       onClick={clickHandler}
     >
       <div
@@ -39,10 +22,20 @@ const Card = (props) => {
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
-          marginLeft: "40px",
+          marginLeft: "20px",
         }}
       >
-        <Marker name={props.number} />
+        <img
+          alt={props.name}
+          src={props.image}
+          style={{
+            width: "100px",
+            height: "70px",
+            borderRadius: "5px",
+            boxShadow: "0px 0px 34px 1px #D3D3D3",
+            objectFit: "cover",
+          }}
+        />
       </div>
       <div
         style={{
@@ -50,7 +43,7 @@ const Card = (props) => {
           justifyContent: "center",
           flexDirection: "column",
           alignItems: "flex-start",
-          marginLeft: "40px",
+          marginLeft: "20px",
         }}
       >
         <h3 style={{ margin: 0 }}>{props.name}</h3>

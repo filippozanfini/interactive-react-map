@@ -1,7 +1,7 @@
-export const SET_NUMBER = "SET_NUMBER";
+export const SET_MARKER = "SET_NUMBER";
 
-export const setNumber = (number) => {
+export const setMarker = (id) => {
   return (dispatch) => {
-    dispatch({ type: SET_NUMBER, number });
+    dispatch({ type: SET_MARKER, id });
   };
 };

@@ -3,11 +3,11 @@
   justify-content: flex-start;
   align-items: center;
   background-color: white;
-  width: 70%;
+  width: 95%;
   padding-top: 20px;
   padding-bottom: 20px;
   border-radius: 10px;
-  margin-top: 5px;
+  margin-top: 10px;
 }
 
 .SelectedCard {
@@ -15,11 +15,11 @@
   justify-content: flex-start;
   align-items: center;
   background-color: #f5f5f5;
-  width: 70%;
+  width: 95%;
   padding-top: 20px;
   padding-bottom: 20px;
   border-radius: 10px;
-  margin-top: 5px;
+  margin-top: 10px;
 }
 
 .Card:hover {
@@ -29,7 +29,7 @@
 
 .CustomMarker {
   position: absolute;
-  background-color: black;
+  background-color: #005375;
   width: 35px;
   height: 35px;
   border-radius: 40px;
@@ -38,24 +38,24 @@
   justify-content: center;
   align-items: center;
   font-weight: bold;
-  border: solid 4px white;
+  box-shadow: 0px 0px 0px 6px rgba(0, 83, 117, 0.5);
 }
 
 .CustomMarker:hover {
-  background-color: #555;
+  background-color: rgba(0, 83, 117, 0.5);
   cursor: pointer;
 }
 
 .SelectedMarker {
   position: absolute;
-  background-color: white;
-  width: 55px;
-  height: 55px;
+  background-color: #005375;
+  width: 50px;
+  height: 50px;
   border-radius: 55px;
   color: black;
   display: flex;
   justify-content: center;
   align-items: center;
   font-weight: bold;
-  border: solid 6px black;
+  box-shadow: 0px 0px 0px 6px rgba(0, 83, 117, 0.5);
 }

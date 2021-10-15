@@ -1,15 +1,15 @@
-import { SET_NUMBER } from "../actions/map";
+import { SET_MARKER } from "../actions/map";
 
 const initialState = {
-  selectedNumber: null,
+  selectedMarker: null,
 };
 
 export default (state = initialState, action) => {
   switch (action.type) {
-    case SET_NUMBER: {
+    case SET_MARKER: {
       return {
         ...state,
-        selectedNumber: action.number,
+        selectedMarker: action.id,
       };
     }
   }
